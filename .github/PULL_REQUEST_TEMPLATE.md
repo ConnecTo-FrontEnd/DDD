@@ -15,4 +15,5 @@
 
 
 ## Related Issue
-<!--Close #이슈번호 로 사용해주세요!-- >
+<!--Close #이슈번호 로 사용해주세요! Squash and merge 사용해주세요!-- >
+
