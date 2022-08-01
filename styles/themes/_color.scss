@@ -1,0 +1,9 @@
+$grayscale-white: #FFFFFF;
+$grayscale-gray1: #DCDCDC;
+$grayscale-gray2: #646464;
+$grayscale-black: #0E0E0E;
+$primary-pink : #EC5064;
+
+@mixin box-shadow2{
+  box-shadow: 0px 1px 6px rgba(130, 130, 130, 0.25);
+}
