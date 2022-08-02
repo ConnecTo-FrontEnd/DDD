@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "start": "run-p watch serve",
+    "sass": "sass index.scss:index.css",
+    "watch": "npm run sass --watch",
+    "serve" : "live-server"
+  }
+}
