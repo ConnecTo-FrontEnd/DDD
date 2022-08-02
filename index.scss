@@ -1,5 +1,14 @@
 @use "./styles" as *;
 
-body {
-  background: red;
+/* Accessibility Styles */
+.sr-only,
+legend {
+  overflow: hidden;
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
