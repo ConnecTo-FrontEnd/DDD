@@ -71,6 +71,7 @@
     border-radius: rem(30px);
     box-shadow: 0 rem(1px) rem(2px) rgb(0 0 0 / 8%),
       0 rem(4px) rem(12px) rgb(0 0 0 / 5%);
+    white-space: nowrap;
   }
 }
 
@@ -113,6 +114,12 @@
   }
   @include mobile {
     display: none;
+  }
+}
+
+.host__link {
+  @include desktop {
+    white-space: nowrap;
   }
 }
 
