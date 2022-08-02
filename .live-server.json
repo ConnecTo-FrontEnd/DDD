@@ -1,0 +1,7 @@
+{
+  "port": 8938,
+  "root": "/",
+  "open": true,
+  "ignore": "styles",
+  "file": "index.html"
+}
