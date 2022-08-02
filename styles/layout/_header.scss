@@ -9,8 +9,8 @@
     width: rem(182px);
     height: rem(64px);
     transform: translateY(-110%);
-    background: #fff;
-    color: #000;
+    background: $grayscale-white;
+    color: $grayscale-black;
     z-index: 10;
 
     & span {
@@ -20,6 +20,9 @@
     &:focus {
       transform: none;
     }
+  }
+  @include mobile {
+    display: none;
   }
 }
 
@@ -42,75 +45,96 @@
 }
 
 .logo {
-  &__link {
-    width: rem(250px);
-  }
+  @include desktop {
+    &__link {
+      width: rem(250px);
+    }
 
-  &__image {
-    width: rem(103px);
-    height: rem(55px);
+    &__image {
+      width: rem(103px);
+      height: rem(55px);
+    }
+  }
+  @include mobile {
+    &__link {
+      display: none;
+    }
   }
 }
 
 .search__container {
-  @include flexbox($justify: space-evenly, $items: center);
-  width: rem(345px);
-  height: rem(57px);
-  border: 1px solid #cfcfcf;
-  border-radius: rem(30px);
-  box-shadow: rem(0) rem(1px) rem(2px) rgb(0 0 0 / 8%),
-    rem(0) rem(4px) rem(12px) rgb(0 0 0 / 5%);
+  @include desktop {
+    @include flexbox($justify: space-evenly, $items: center);
+    width: rem(345px);
+    height: rem(57px);
+    border: 1px solid #cfcfcf;
+    border-radius: rem(30px);
+    box-shadow: 0 rem(1px) rem(2px) rgb(0 0 0 / 8%),
+      0 rem(4px) rem(12px) rgb(0 0 0 / 5%);
+  }
 }
 
-[aria-label="날짜로 검색하기"] {
-  position: relative;
+.search__button:nth-child(3) {
+  @include desktop {
+    position: relative;
+    &::before {
+      content: "";
+      @include pos($t: 0, $l: rem(-7px));
+      width: rem(1px);
+      height: rem(24px);
+      background: $grayscale-gray1;
+    }
 
-  &::before {
-    content: "";
-    @include pos($t: 0, $l: rem(-7px));
-    width: rem(1px);
-    height: rem(24px);
-    background: $grayscale-gray1;
-  }
-
-  &::after {
-    content: "";
-    @include pos($t: 0, $r: rem(-7px));
-    width: rem(1px);
-    height: rem(24px);
-    background: $grayscale-gray1;
+    &::after {
+      content: "";
+      @include pos($t: 0, $r: rem(-7px));
+      width: rem(1px);
+      height: rem(24px);
+      background: $grayscale-gray1;
+    }
   }
 }
 
 .search__button.icon {
-  width: rem(20px);
-  height: rem(20px);
-  border-radius: 50%;
-  background: $primary-pink center
-    url("./../../assets/icon/icon-search-white.svg") no-repeat;
-  background-size: rem(10px) rem(10px);
+  @include desktop {
+    width: rem(20px);
+    height: rem(20px);
+    border-radius: 50%;
+    background: $primary-pink center
+      url("./../../assets/icon/icon-search-white.svg") no-repeat;
+    background-size: rem(10px) rem(10px);
+  }
 }
 
 .toolbar-container {
-  @include flexbox($justify: space-around, $items: center);
-  width: rem(250px);
+  @include desktop {
+    @include flexbox($justify: space-around, $items: center);
+    width: rem(250px);
+  }
+  @include mobile {
+    display: none;
+  }
 }
 
 .language__button {
-  width: rem(40px);
-  height: rem(42px);
-  margin: 0 rem(12px);
-  background: center url("./../../assets/icon/icon-globe.svg") no-repeat;
-  background-size: rem(16px) rem(16px);
+  @include desktop {
+    width: rem(40px);
+    height: rem(42px);
+    margin: 0 rem(12px);
+    background: center url("./../../assets/icon/icon-globe.svg") no-repeat;
+    background-size: rem(16px) rem(16px);
+  }
 }
 
 .user__info {
-  width: rem(77px);
-  height: rem(42px);
-  border-radius: rem(20px);
-  background-image: url("./../../assets/icon/icon-hamburger-menu.svg"),
-    url("./../../assets/icon/icon-avatar-filled.png");
-  background-size: rem(16px) rem(16px), rem(30px) rem(30px);
-  background-repeat: no-repeat no-repeat;
-  background-position: rem(12px) rem(12px), rem(36px) rem(6px);
+  @include desktop {
+    width: rem(72px);
+    height: rem(36px);
+    border-radius: rem(20px);
+    background-image: url("./../../assets/icon/icon-hamburger-menu.svg"),
+      url("./../../assets/icon/icon-avatar-filled.png");
+    background-size: rem(20px) rem(17.5px), rem(20px) rem(20px);
+    background-repeat: no-repeat no-repeat;
+    background-position: rem(12px) rem(9px), rem(40px) rem(7px);
+  }
 }
