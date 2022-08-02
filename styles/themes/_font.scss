@@ -1,21 +1,20 @@
-@use '../utils/unit' as *;
+@use "../utils/unit" as *;
 
-@mixin text-10-regular{
+@mixin text-10-regular {
   font-size: rem(10px);
   font-weight: 400;
 }
-@mixin text-12-regular{
+@mixin text-12-regular {
   font-size: rem(12px);
   font-weight: 400;
 }
 
-@mixin text-14-regular{
+@mixin text-14-regular {
   font-size: rem(14px);
   font-weight: 400;
 }
 
-@mixin text-14-regular{
+@mixin text-14-regular {
   font-size: rem(10px);
   font-weight: 700;
 }
-
