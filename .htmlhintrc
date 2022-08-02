@@ -1,0 +1,20 @@
+{
+  "doctype-first": true,
+  "title-require": true,
+  "attr-value-not-empty": false,
+  "attr-lowercase": true,
+  "attr-value-double-quotes": true,
+  "attr-no-unnecessary-whitespace": true,
+  "attr-unsafe-chars": true,
+  "attr-no-duplication": true,
+  "attr-sorted": true,
+  "attr-whitespace": true,
+  "alt-require": true,
+  "input-requires-label": true,
+  "tag-pair": true,
+  "tag-self-close": true,
+  "tagname-lowercase": true,
+  "spec-char-escape": true,
+  "id-unique": true,
+  "src-not-empty": true
+}
