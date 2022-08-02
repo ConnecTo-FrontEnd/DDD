@@ -4,6 +4,7 @@
     "sass": "sass index.scss:index.css",
     "watch": "npm run sass -- --watch",
     "serve": "live-server",
+    "check": "echo \"1. htmlhint 검사를 시행합니다...\" && npx htmlhint \"**/*.html\" && echo \"2. prettier 검사를 시행합니다...\" && npx prettier --check . ",
     "prepare": "husky install"
   },
   "devDependencies": {
