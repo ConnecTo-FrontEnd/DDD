@@ -1,0 +1,22 @@
+@use "../utils" as *;
+@use "../themes" as *;
+
+.footer {
+  background: $grayscale-gray1;
+  padding: rem(30px) rem(20px);
+  &__main {
+    @include flexbox($justify: space-between, $wrap: wrap);
+    gap: rem(20px);
+  }
+  &__main > li {
+    @include text-14-bold;
+    width: rem(250px);
+  }
+  &__sub {
+    @include text-14-regular;
+    margin-top: 1em;
+  }
+  &__sub > li {
+    line-height: 2;
+  }
+}
