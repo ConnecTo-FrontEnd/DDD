@@ -4,6 +4,6 @@ $grayscale-gray2: #646464;
 $grayscale-black: #0e0e0e;
 $primary-pink: #ff385c;
 
-@mixin box-shadow2 {
+@mixin box-shadow {
   box-shadow: 0px 1px 6px rgba(130, 130, 130, 0.25);
 }
