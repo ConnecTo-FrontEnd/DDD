@@ -1,0 +1,61 @@
+@use "./styles" as *;
+
+// 임시 숨김 처리
+.accommodation__container button {
+  display: none;
+}
+
+.accommodation {
+  &__container {
+    display: grid;
+    padding: rem(34px);
+    grid-template-columns: repeat(auto-fit, minmax(rem(330px), auto));
+    gap: rem(34px);
+  }
+
+  &__item {
+    &__image {
+      img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        border-radius: rem(10px);
+        background-color: $grayscale-gray1;
+      }
+    }
+
+    &__brief {
+      @include text-15-regular;
+      position: relative;
+      margin-top: rem(15px);
+
+      .font-bold {
+        color: $grayscale-black;
+        abbr {
+          text-decoration: none !important;
+          cursor: help;
+        }
+      }
+
+      li:nth-child(n + 1):nth-child(-n + 3) {
+        margin-bottom: rem(4px);
+      }
+
+      li:nth-child(n + 2):nth-child(-n + 3) {
+        color: $grayscale-gray2;
+      }
+
+      li:nth-child(4) {
+        margin-top: rem(9px);
+      }
+
+      .review {
+        @include pos($t: 0, $r: 0);
+      }
+
+      .review::before {
+        content: "★";
+        display: inline;
+      }
+    }
+  }
+}
