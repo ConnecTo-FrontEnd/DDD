@@ -46,7 +46,7 @@ button {
   > button {
     @include desktop {
       flex-shrink: 0;
-      border: 1px solid $grayscale-gray1;
+      border: rem(1px) solid $grayscale-gray1;
     }
     @include mobile {
       display: none;
@@ -176,7 +176,7 @@ button {
     @include pos($l: 10%, $b: 0);
     display: block;
     width: 80%;
-    height: 2px;
+    height: rem(2px);
     background-color: $grayscale-gray1;
   }
 
@@ -191,7 +191,7 @@ button {
       background-color: transparent;
       margin-top: rem(14px);
       padding: rem(10px) rem(25px);
-      border: 1px solid $grayscale-gray2;
+      border: rem(1px) solid $grayscale-gray2;
       border-radius: rem(4px);
     }
   }
