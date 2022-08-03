@@ -12,17 +12,21 @@
     background: $grayscale-white;
     color: $grayscale-black;
     z-index: 10;
-
-    & span {
-      display: inline-block;
-    }
-
-    &:focus {
-      transform: none;
-    }
   }
   @include mobile {
     display: none;
+  }
+
+  & span {
+    @include desktop {
+      display: inline-block;
+    }
+  }
+
+  &:focus {
+    @include desktop {
+      transform: none;
+    }
   }
 }
 
@@ -46,19 +50,19 @@
 }
 
 .logo {
-  @include desktop {
-    &__link {
+  &__link {
+    @include desktop {
       width: rem(250px);
     }
-
-    &__image {
-      width: rem(103px);
-      height: rem(55px);
+    @include mobile {
+      display: none;
     }
   }
-  @include mobile {
-    &__link {
-      display: none;
+
+  &__image {
+    @include desktop {
+      width: rem(103px);
+      height: rem(55px);
     }
   }
 }
@@ -82,7 +86,9 @@
     width: 90%;
     height: rem(47px);
     @include text-12-regular;
-    &::before {
+  }
+  &::before {
+    @include mobile {
       content: "";
       @include pos($t: rem(17px), $l: rem(14px));
       width: rem(13px);
@@ -90,7 +96,9 @@
       background: url("./../../assets/icon/icon-search.svg") no-repeat;
       background-size: contain;
     }
-    &::after {
+  }
+  &::after {
+    @include mobile {
       content: "어디로 여행가세요?";
       @include pos($t: rem(8px), $l: rem(49px));
       @include text-14-bold;
@@ -99,12 +107,14 @@
 }
 
 .search__button:nth-child(3) {
-  @include mobile {
-    &::before {
+  &::before {
+    @include mobile {
       content: "·";
     }
+  }
 
-    &::after {
+  &::after {
+    @include mobile {
       content: "·";
     }
   }
@@ -113,15 +123,19 @@
 .search__button:nth-child(3) {
   @include desktop {
     position: relative;
-    &::before {
+  }
+  &::before {
+    @include desktop {
       content: "";
       @include pos($t: 0, $l: rem(-6px));
       width: rem(1px);
       height: rem(24px);
       background: $grayscale-gray1;
     }
+  }
 
-    &::after {
+  &::after {
+    @include desktop {
       content: "";
       @include pos($t: 0, $r: rem(-6px));
       width: rem(1px);
