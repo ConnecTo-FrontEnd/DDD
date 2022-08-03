@@ -33,7 +33,7 @@
     padding: 0 rem(70px);
     height: rem(80px);
     @include text-14-regular;
-    border-bottom: 1px solid #cfcfcf;
+    border-bottom: 1px solid $grayscale-gray1;
   }
   button {
     border: none;
@@ -41,7 +41,7 @@
   }
 
   .user__info {
-    border: 1px solid #cfcfcf;
+    border: 1px solid $grayscale-gray1;
   }
 }
 
@@ -64,7 +64,7 @@
 }
 
 .search__container {
-  border: 1px solid #cfcfcf;
+  border: 1px solid $grayscale-gray1;
   border-radius: rem(30px);
   box-shadow: 0 rem(1px) rem(2px) rgb(0 0 0 / 8%),
     0 rem(4px) rem(12px) rgb(0 0 0 / 5%);
