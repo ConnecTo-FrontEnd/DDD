@@ -99,6 +99,18 @@
 }
 
 .search__button:nth-child(3) {
+  @include mobile {
+    &::before {
+      content: "·";
+    }
+
+    &::after {
+      content: "·";
+    }
+  }
+}
+
+.search__button:nth-child(3) {
   @include desktop {
     position: relative;
     &::before {
