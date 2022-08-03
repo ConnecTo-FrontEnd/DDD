@@ -2,13 +2,74 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <title>여행은 살아보는 거야 - 에어비앤비</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./index.css" />
+    <title>에어비앤비 - 여행은 살아보는 거야</title>
   </head>
 
   <body>
     <!-- 조한 part -->
-    <header></header>
+    <!-- 스킵 네비게이션 -->
+    <a href="/" class="skip-nav"><span>컨텐츠로 바로가기</span></a>
+
+    <!-- 헤더 영역 -->
+    <header class="header">
+      <h1 class="sr-only">에어비앤비 홈</h1>
+      <a href="/" class="logo__link">
+        <img src="./assets/logo/logo-airbnb.svg" alt="" class="logo__image" />
+      </a>
+      <div
+        class="search__container"
+        role="search"
+        aria-labelledby="searchLabel"
+      >
+        <span class="sr-only" id="searchLabel">검색 시작하기</span>
+        <button
+          class="search__button"
+          aria-label="위치로 검색하기"
+          type="button"
+        >
+          어디든지
+        </button>
+        <button
+          class="search__button"
+          aria-label="날짜로 검색하기"
+          type="button"
+        >
+          언제든 일주일
+        </button>
+        <button
+          class="search__button guest"
+          aria-label="인원으로 검색하기"
+          type="button"
+        >
+          게스트 추가
+        </button>
+        <button class="search__button icon" aria-label="위치로 검색하기">
+          <!-- 배경 이미지 삽입 -->
+        </button>
+      </div>
+      <div class="toolbar-container">
+        <a href="/" class="host__link">호스트 되기</a>
+        <button
+          class="language__button"
+          aria-expanded="false"
+          aria-label="언어 및 통화 선택"
+          type="button"
+        >
+          <!-- 배경 이미지 삽입 -->
+        </button>
+        <button
+          class="user__info"
+          aria-expanded="false"
+          aria-label="메인 탐색 메뉴"
+          type="button"
+        >
+          <!-- 배경 이미지 삽입 -->
+        </button>
+      </div>
+    </header>
 
     <!-- 윤하 part -->
     <nav class="navigation">
