@@ -4,12 +4,12 @@
     "sass": "sass index.scss:index.css",
     "watch": "npm run sass -- --watch",
     "serve": "live-server",
+    "build": "npm run sass && run-p html-minify css-nano move-assets-to-public",
     "check": "echo \"1. htmlhint 검사를 시행합니다...\" && npx htmlhint \"**/*.html\" && echo \"2. prettier 검사를 시행합니다...\" && npx prettier --check . ",
     "prepare": "husky install",
     "html-minify": "html-minifier --collapse-whitespace --remove-comments --remove-redundant-attributes --remove-tag-whitespace --minify-css true --minify-js true -o public/index.html index.html",
     "css-nano": "postcss index.css > public/index.css",
-    "move-assets-to-public": "cp -r assets/ public/assets",
-    "build": "npm run sass && run-p html-minify css-nano move-assets-to-public"
+    "move-assets-to-public": "cp -r assets/ public/assets"
   },
   "devDependencies": {
     "cssnano": "^5.1.12",
