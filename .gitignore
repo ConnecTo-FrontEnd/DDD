@@ -2,6 +2,7 @@
 /node_modules
 *.css
 *.css.map
+!/public/
 
 # Created by https://www.toptal.com/developers/gitignore/api/webstorm,visualstudiocode,windows,macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=webstorm,visualstudiocode,windows,macos
@@ -206,3 +207,4 @@ $RECYCLE.BIN/
 # End of https://www.toptal.com/developers/gitignore/api/webstorm,visualstudiocode,windows,macos
 
 /.idea/
+
