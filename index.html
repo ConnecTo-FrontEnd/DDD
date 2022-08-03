@@ -1,116 +1,173 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko-KR">
   <head>
     <meta charset="UTF-8" />
-    <title>여행은 살아보는 거야 - 에어비앤비</title>
-    <link rel="stylesheet" href="./index.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./index.css" rel="stylesheet" />
+    <title>에어비앤비 - 여행은 살아보는 거야</title>
   </head>
 
   <body>
-    <!-- 조한 part -->
-    <header></header>
+    <a class="skip-nav" href="/"><span>컨텐츠로 바로가기</span></a>
+    <header class="header">
+      <h1 class="sr-only">에어비앤비 홈</h1>
+      <a class="logo__link" href="/">
+        <img class="logo__image" src="./assets/logo/logo-airbnb.svg" alt="" />
+      </a>
+      <div
+        class="search__container"
+        role="search"
+        aria-labelledby="searchLabel"
+      >
+        <span class="sr-only" id="searchLabel">검색 시작하기</span>
+        <button
+          class="search__button"
+          type="button"
+          aria-label="위치로 검색하기"
+        >
+          어디든지
+        </button>
+        <button
+          class="search__button"
+          type="button"
+          aria-label="날짜로 검색하기"
+        >
+          언제든 일주일
+        </button>
+        <button
+          class="search__button guest"
+          type="button"
+          aria-label="인원으로 검색하기"
+        >
+          게스트 추가
+        </button>
+        <button class="search__button filter" aria-label="위치로 검색하기">
+          <!-- 배경 이미지 삽입 -->
+        </button>
+      </div>
+      <div class="toolbar-container">
+        <a class="host__link" href="/">호스트 되기</a>
+        <button
+          class="language__button"
+          type="button"
+          aria-expanded="false"
+          aria-label="언어 및 통화 선택"
+        >
+          <!-- 배경 이미지 삽입 -->
+        </button>
+        <button
+          class="user__info"
+          type="button"
+          aria-expanded="false"
+          aria-label="메인 탐색 메뉴"
+        >
+          <!-- 배경 이미지 삽입 -->
+        </button>
+      </div>
+    </header>
 
     <!-- 윤하 part -->
     <nav class="navigation">
       <h2 class="sr-only">유형별 숙소 보기</h2>
       <ul class="navigation__list">
         <li class="navigation__item">
-          <button type="button" class="navigation__item__button">섬</button>
+          <button class="navigation__item__button" type="button">섬</button>
         </li>
         <li class="navigation__item">
-          <button type="button" class="navigation__item__button">
+          <button class="navigation__item__button" type="button">
             국립공원
           </button>
         </li>
         <li class="navigation__item">
-          <button type="button" class="navigation__item__button">
+          <button class="navigation__item__button" type="button">
             통나무집
           </button>
         </li>
         <li class="navigation__item">
-          <button type="button" class="navigation__item__button">
+          <button class="navigation__item__button" type="button">
             기상천외한 숙소
           </button>
         </li>
         <li class="navigation__item">
-          <button type="button" class="navigation__item__button">
+          <button class="navigation__item__button" type="button">
             해변 근처
           </button>
         </li>
         <li class="navigation__item">
-          <button type="button" class="navigation__item__button">
+          <button class="navigation__item__button" type="button">
             초소형 주택
           </button>
         </li>
         <li class="navigation__item">
-          <button type="button" class="navigation__item__button">디자인</button>
+          <button class="navigation__item__button" type="button">디자인</button>
         </li>
         <li class="navigation__item">
-          <button type="button" class="navigation__item__button">캠핑장</button>
+          <button class="navigation__item__button" type="button">캠핑장</button>
         </li>
         <li class="navigation__item">
-          <button type="button" class="navigation__item__button">
+          <button class="navigation__item__button" type="button">
             A자형 주택
           </button>
         </li>
         <li class="navigation__item">
-          <button type="button" class="navigation__item__button">호숫가</button>
+          <button class="navigation__item__button" type="button">호숫가</button>
         </li>
         <li class="navigation__item">
-          <button type="button" class="navigation__item__button">북극</button>
+          <button class="navigation__item__button" type="button">북극</button>
         </li>
         <li class="navigation__item">
-          <button type="button" class="navigation__item__button">
+          <button class="navigation__item__button" type="button">
             멋진 수영장
           </button>
         </li>
         <li class="navigation__item">
-          <button type="button" class="navigation__item__button">동굴</button>
+          <button class="navigation__item__button" type="button">동굴</button>
         </li>
         <li class="navigation__item">
-          <button type="button" class="navigation__item__button">서핑</button>
+          <button class="navigation__item__button" type="button">서핑</button>
         </li>
         <li class="navigation__item">
-          <button type="button" class="navigation__item__button">
+          <button class="navigation__item__button" type="button">
             최고의 전망
           </button>
         </li>
         <li class="navigation__item">
-          <button type="button" class="navigation__item__button">
+          <button class="navigation__item__button" type="button">
             복토 주택
           </button>
         </li>
         <li class="navigation__item">
-          <button type="button" class="navigation__item__button">
+          <button class="navigation__item__button" type="button">
             열대지역
           </button>
         </li>
       </ul>
       <button
-        type="button"
         class="navigation__left arrow-button"
+        type="button"
         aria-label="이전 숙소 유형 더보기"
       ></button>
       <button
-        type="button"
         class="navigation__right arrow-button"
+        type="button"
         aria-label="다음 숙소 유형 더보기"
       ></button>
-      <button type="button" class="navigation__filter">필터</button>
+      <button class="navigation__filter" type="button">필터</button>
     </nav>
     <main>
       <h3 class="sr-only">섬 유형의 숙소들</h3>
       <section class="accommodation__container">
         <article class="accommodation__item">
-          <a href="/" class="accommodation__link">
+          <a class="accommodation__link" href="/">
             <!-- h4 변경 -->
             <h4 class="sr-only">몰디브에 위치한 워터 방갈로</h4>
             <div class="accommodation__item__image">
               <!-- src, alt 변경 -->
               <img src="/" alt="" />
               <button
-                type="button"
                 class="arrow-button"
+                type="button"
                 aria-label="다음 숙소 이미지 더보기"
               ></button>
             </div>
@@ -135,15 +192,15 @@
           </a>
         </article>
         <article class="accommodation__item">
-          <a href="/" class="accommodation__link">
+          <a class="accommodation__link" href="/">
             <!-- h4 변경 -->
             <h4 class="sr-only">몰디브에 위치한 워터 방갈로</h4>
             <div class="accommodation__item__image">
               <!-- src, alt 변경 -->
               <img src="/" alt="" />
               <button
-                type="button"
                 class="arrow-button"
+                type="button"
                 aria-label="다음 숙소 이미지 더보기"
               ></button>
             </div>
@@ -168,15 +225,15 @@
           </a>
         </article>
         <article class="accommodation__item">
-          <a href="/" class="accommodation__link">
+          <a class="accommodation__link" href="/">
             <!-- h4 변경 -->
             <h4 class="sr-only">몰디브에 위치한 워터 방갈로</h4>
             <div class="accommodation__item__image">
               <!-- src, alt 변경 -->
               <img src="/" alt="" />
               <button
-                type="button"
                 class="arrow-button"
+                type="button"
                 aria-label="다음 숙소 이미지 더보기"
               ></button>
             </div>
@@ -201,15 +258,15 @@
           </a>
         </article>
         <article class="accommodation__item">
-          <a href="/" class="accommodation__link">
+          <a class="accommodation__link" href="/">
             <!-- h4 변경 -->
             <h4 class="sr-only">몰디브에 위치한 워터 방갈로</h4>
             <div class="accommodation__item__image">
               <!-- src, alt 변경 -->
               <img src="/" alt="" />
               <button
-                type="button"
                 class="arrow-button"
+                type="button"
                 aria-label="다음 숙소 이미지 더보기"
               ></button>
             </div>
@@ -234,15 +291,15 @@
           </a>
         </article>
         <article class="accommodation__item">
-          <a href="/" class="accommodation__link">
+          <a class="accommodation__link" href="/">
             <!-- h4 변경 -->
             <h4 class="sr-only">몰디브에 위치한 워터 방갈로</h4>
             <div class="accommodation__item__image">
               <!-- src, alt 변경 -->
               <img src="/" alt="" />
               <button
-                type="button"
                 class="arrow-button"
+                type="button"
                 aria-label="다음 숙소 이미지 더보기"
               ></button>
             </div>
@@ -269,13 +326,13 @@
       </section>
       <div class="accommodation__more">
         섬 카테고리 계속 검색하기<button
-          type="button"
           class="accommodation__more__button"
+          type="button"
         >
           더 보기
         </button>
       </div>
-      <button type="button" class="accommodation__map">지도 표시하기</button>
+      <button class="accommodation__map" type="button">지도 표시하기</button>
     </main>
     <footer class="footer">
       <ul class="footer__main">
