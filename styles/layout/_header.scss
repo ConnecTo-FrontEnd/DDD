@@ -32,6 +32,7 @@
     @include flexbox($justify: space-between, $items: center);
     padding: 0 rem(70px);
     height: rem(80px);
+    @include text-14-regular;
     border-bottom: 1px solid #cfcfcf;
   }
   button {
@@ -63,16 +64,37 @@
 }
 
 .search__container {
+  border: 1px solid #cfcfcf;
+  border-radius: rem(30px);
+  box-shadow: 0 rem(1px) rem(2px) rgb(0 0 0 / 8%),
+  0 rem(4px) rem(12px) rgb(0 0 0 / 5%);
   @include desktop {
     @include flexbox($justify: space-evenly, $items: center);
     width: rem(345px);
     min-width: rem(300px);
     height: rem(57px);
-    border: 1px solid #cfcfcf;
-    border-radius: rem(30px);
-    box-shadow: 0 rem(1px) rem(2px) rgb(0 0 0 / 8%),
-      0 rem(4px) rem(12px) rgb(0 0 0 / 5%);
     white-space: nowrap;
+  }
+  @include mobile {
+    position: relative;
+    margin: rem(23px) auto rem(19px) auto;
+    padding-top: rem(27.5px);
+    width: 90%;
+    height: rem(47px);
+    @include text-12-regular;
+    &::before {
+      content: "";
+      @include pos($t: rem(17px), $l: rem(14px));
+      width: rem(13px);
+      height: rem(13px);
+      background: url("./../../assets/icon/icon-search.svg") no-repeat;
+      background-size: contain;
+    }
+    &::after {
+      content: "어디로 여행가세요?";
+      @include pos($t: rem(11.5px), $l: rem(49px));
+      @include text-14-bold;
+    }
   }
 }
 
@@ -105,6 +127,22 @@
     background: $primary-pink center
       url("./../../assets/icon/icon-search-white.svg") no-repeat;
     background-size: rem(10px) rem(10px);
+  }
+}
+
+.search__button.filter {
+  @include desktop {
+    display: none;
+  }
+  @include mobile {
+    width: rem(25px);
+    height: rem(25px);
+    border: 1px solid $grayscale-gray1;
+    border-radius: 50%;
+    background: rem(6.5px) rem(6.5px) url("./../../assets/icon/icon-filter.png")
+      no-repeat;
+    background-size: rem(10px) rem(10px);
+    transform: translate(rem(14px), rem(-14px));
   }
 }
 
