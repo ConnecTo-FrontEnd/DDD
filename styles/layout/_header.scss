@@ -53,9 +53,17 @@
   &__link {
     @include desktop {
       width: rem(250px);
+      outline: none;
     }
     @include mobile {
       display: none;
+    }
+  }
+
+  &__link:focus &__image {
+    @include desktop {
+      outline: medium solid #0000ff;
+      border-radius: rem(5px);
     }
   }
 
