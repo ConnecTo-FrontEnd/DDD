@@ -30,7 +30,7 @@
 .header {
   @include desktop {
     @include flexbox($justify: space-between, $items: center);
-    padding: 0 rem(80px);
+    padding: 0 rem(70px);
     height: rem(80px);
     border-bottom: 1px solid #cfcfcf;
   }
@@ -66,6 +66,7 @@
   @include desktop {
     @include flexbox($justify: space-evenly, $items: center);
     width: rem(345px);
+    min-width: rem(300px);
     height: rem(57px);
     border: 1px solid #cfcfcf;
     border-radius: rem(30px);
@@ -80,7 +81,7 @@
     position: relative;
     &::before {
       content: "";
-      @include pos($t: 0, $l: rem(-7px));
+      @include pos($t: 0, $l: rem(-6px));
       width: rem(1px);
       height: rem(24px);
       background: $grayscale-gray1;
@@ -88,7 +89,7 @@
 
     &::after {
       content: "";
-      @include pos($t: 0, $r: rem(-7px));
+      @include pos($t: 0, $r: rem(-6px));
       width: rem(1px);
       height: rem(24px);
       background: $grayscale-gray1;
@@ -127,7 +128,6 @@
   @include desktop {
     width: rem(40px);
     height: rem(42px);
-    margin: 0 rem(12px);
     background: center url("./../../assets/icon/icon-globe.svg") no-repeat;
     background-size: rem(16px) rem(16px);
   }
