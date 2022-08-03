@@ -5,9 +5,11 @@
     "watch": "npm run sass -- --watch",
     "serve": "live-server",
     "check": "echo \"1. htmlhint 검사를 시행합니다...\" && npx htmlhint \"**/*.html\" && echo \"2. prettier 검사를 시행합니다...\" && npx prettier --check . ",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "html-minify": "html-minifier --collapse-whitespace --remove-comments --remove-redundant-attributes --remove-tag-whitespace --minify-css true --minify-js true -o public/index.html index.html"
   },
   "devDependencies": {
+    "html-minifier": "^4.0.0",
     "htmlhint": "^1.1.4",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
