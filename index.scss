@@ -91,8 +91,8 @@ button {
     content: "";
     display: block;
     width: 100%;
-    height: 3px;
-    border-radius: 3px;
+    height: rem(3px);
+    border-radius: rem(3px);
     background-color: $grayscale-gray1;
     @include pos(absolute, $b: 0);
   }
