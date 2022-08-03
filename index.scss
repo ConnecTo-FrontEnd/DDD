@@ -21,12 +21,14 @@ button {
   &__list {
     @include flexbox($direction: row, $wrap: nowrap);
     overflow: hidden;
+    overflow-x: scroll;
+    
+
     @include desktop {
       gap: rem(50px);
     }
     @include mobile {
       gap: rem(20px);
-      overflow-x: scroll;
     }
   }
   &__item {
@@ -37,10 +39,10 @@ button {
     border: none;
     background-color: transparent;
     @include desktop {
-      height: rem(55px);
+      height: rem(63px);
     }
     @include mobile {
-      height: rem(44px);
+      height: rem(53px);
     }
   }
   > button {
