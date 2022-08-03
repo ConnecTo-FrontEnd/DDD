@@ -6,8 +6,8 @@ button {
 
 // 네비게이션 영역
 @mixin sprite_img($n) {
-  background-image: url(./assets/icon-location/icon-location-sprite.png);
-  background-size: rem(547px) rem(26px);
+  background-image: url(./assets/icon-location/real-icon-location-sprite.png);
+  background-size: rem(546px) rem(26px);
   background-repeat: no-repeat;
   background-position: rem((-35 * ($n - 1)) * 1px) 0;
 }
