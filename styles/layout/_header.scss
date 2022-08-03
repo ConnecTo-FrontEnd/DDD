@@ -67,7 +67,7 @@
   border: 1px solid #cfcfcf;
   border-radius: rem(30px);
   box-shadow: 0 rem(1px) rem(2px) rgb(0 0 0 / 8%),
-  0 rem(4px) rem(12px) rgb(0 0 0 / 5%);
+    0 rem(4px) rem(12px) rgb(0 0 0 / 5%);
   @include desktop {
     @include flexbox($justify: space-evenly, $items: center);
     width: rem(345px);
@@ -78,7 +78,7 @@
   @include mobile {
     position: relative;
     margin: rem(23px) auto rem(19px) auto;
-    padding-top: rem(27.5px);
+    padding: rem(25px) 0 0 rem(43px);
     width: 90%;
     height: rem(47px);
     @include text-12-regular;
@@ -92,7 +92,7 @@
     }
     &::after {
       content: "어디로 여행가세요?";
-      @include pos($t: rem(11.5px), $l: rem(49px));
+      @include pos($t: rem(8px), $l: rem(49px));
       @include text-14-bold;
     }
   }
@@ -135,6 +135,7 @@
     display: none;
   }
   @include mobile {
+    @include pos($t: rem(11px), $r: rem(10px));
     width: rem(25px);
     height: rem(25px);
     border: 1px solid $grayscale-gray1;
@@ -142,7 +143,6 @@
     background: rem(6.5px) rem(6.5px) url("./../../assets/icon/icon-filter.png")
       no-repeat;
     background-size: rem(10px) rem(10px);
-    transform: translate(rem(14px), rem(-14px));
   }
 }
 
