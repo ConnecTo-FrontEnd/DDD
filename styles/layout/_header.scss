@@ -53,9 +53,20 @@
   &__link {
     @include desktop {
       width: rem(250px);
+      outline: none;
+    }
+    @media (max-width: 1127px) {
+      width: rem(40px);
     }
     @include mobile {
       display: none;
+    }
+  }
+
+  &__link:focus &__image {
+    @include desktop {
+      outline: medium solid #0000ff;
+      border-radius: rem(5px);
     }
   }
 
@@ -102,6 +113,14 @@
       content: "어디로 여행가세요?";
       @include pos($t: rem(8px), $l: rem(49px));
       @include text-14-bold;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    @include desktop {
+      box-shadow: 0 rem(3px) rem(7px) rgb(0 0 0 / 8%),
+        0 rem(4px) rem(12px) rgb(0 0 0 / 5%);
     }
   }
 }

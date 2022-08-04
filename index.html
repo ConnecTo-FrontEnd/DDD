@@ -9,15 +9,26 @@
     />
     <meta name="description" content="에어비앤비 홈페이지" />
     <link href="./index.css" rel="stylesheet" />
+    <link href="./assets/favicon/favicon-32x32.png" rel="icon" />
     <title>에어비앤비 - 여행은 살아보는 거야</title>
   </head>
 
   <body>
-    <a class="skip-nav" href="/"><span>컨텐츠로 바로가기</span></a>
+    <a class="skip-nav" href="#accommodation__container"
+      ><span>컨텐츠로 바로가기</span></a
+    >
     <header class="header">
       <h1 class="sr-only">에어비앤비 홈</h1>
-      <a class="logo__link" href="/" aria-label="에어비앤비 홈페이지">
-        <img class="logo__image" src="./assets/logo/logo-airbnb.svg" alt="" />
+      <a class="logo__link" href="/">
+        <picture class="logo__image">
+          <source
+            type="image/svg+xml"
+            media="(max-width: 1127px)"
+            srcset="./assets/logo/logo-airbnb-m.svg"
+          />
+          <source srcset="./assets/logo/logo-airbnb.svg" />
+          <img src="./assets/logo/logo-airbnb.svg" alt="에어비앤비" />
+        </picture>
       </a>
       <div
         class="search__container"
@@ -148,7 +159,7 @@
     </nav>
     <main>
       <section class="accommodation__container">
-        <h3 class="sr-only">섬 유형의 숙소들</h3>
+        <h3 class="sr-only" id="accommodation__container">섬 유형의 숙소들</h3>
         <article class="accommodation__item">
           <a class="accommodation__link" href="/">
             <!-- h4 변경 -->
@@ -157,13 +168,40 @@
               <!-- src, alt 변경 -->
               <picture>
                 <picture>
-                  <source srcset="https://a0.muscache.com/im/pictures/373443ec-b377-4181-b753-3a2f3508c2b3.jpg?im_w=320 1x, https://a0.muscache.com/im/pictures/373443ec-b377-4181-b753-3a2f3508c2b3.jpg?im_w=720 2x" media="(max-width: 743px)"/>
-                  <source srcset="https://a0.muscache.com/im/pictures/373443ec-b377-4181-b753-3a2f3508c2b3.jpg?im_w=720 1x, https://a0.muscache.com/im/pictures/373443ec-b377-4181-b753-3a2f3508c2b3.jpg?im_w=1440 2x" media="(min-width: 743.1px) and (max-width: 1127px)"/>
-                  <source srcset="https://a0.muscache.com/im/pictures/373443ec-b377-4181-b753-3a2f3508c2b3.jpg?im_w=1200 1x, https://a0.muscache.com/im/pictures/373443ec-b377-4181-b753-3a2f3508c2b3.jpg?im_w=2560 2x" media="(min-width: 1127.1px) and (max-width: 1439px)"/>
-                  <source srcset="https://a0.muscache.com/im/pictures/373443ec-b377-4181-b753-3a2f3508c2b3.jpg?im_w=1680 1x, https://a0.muscache.com/im/pictures/373443ec-b377-4181-b753-3a2f3508c2b3.jpg?im_w=2560 2x" media="(min-width: 1439.1px)"/>
-                  <img src="https://a0.muscache.com/im/pictures/373443ec-b377-4181-b753-3a2f3508c2b3.jpg?im_w=720" alt="푸른 바다 가운데 섬이 있고 바다 위에 9개의 방갈로가 섬을 둘러싸고 있다" />
-                </picture>  
-              </picture>                
+                  <source
+                    srcset="
+                      https://a0.muscache.com/im/pictures/373443ec-b377-4181-b753-3a2f3508c2b3.jpg?im_w=320 1x,
+                      https://a0.muscache.com/im/pictures/373443ec-b377-4181-b753-3a2f3508c2b3.jpg?im_w=720 2x
+                    "
+                    media="(max-width: 743px)"
+                  />
+                  <source
+                    srcset="
+                      https://a0.muscache.com/im/pictures/373443ec-b377-4181-b753-3a2f3508c2b3.jpg?im_w=720  1x,
+                      https://a0.muscache.com/im/pictures/373443ec-b377-4181-b753-3a2f3508c2b3.jpg?im_w=1440 2x
+                    "
+                    media="(min-width: 743.1px) and (max-width: 1127px)"
+                  />
+                  <source
+                    srcset="
+                      https://a0.muscache.com/im/pictures/373443ec-b377-4181-b753-3a2f3508c2b3.jpg?im_w=1200 1x,
+                      https://a0.muscache.com/im/pictures/373443ec-b377-4181-b753-3a2f3508c2b3.jpg?im_w=2560 2x
+                    "
+                    media="(min-width: 1127.1px) and (max-width: 1439px)"
+                  />
+                  <source
+                    srcset="
+                      https://a0.muscache.com/im/pictures/373443ec-b377-4181-b753-3a2f3508c2b3.jpg?im_w=1680 1x,
+                      https://a0.muscache.com/im/pictures/373443ec-b377-4181-b753-3a2f3508c2b3.jpg?im_w=2560 2x
+                    "
+                    media="(min-width: 1439.1px)"
+                  />
+                  <img
+                    src="https://a0.muscache.com/im/pictures/373443ec-b377-4181-b753-3a2f3508c2b3.jpg?im_w=720"
+                    alt="푸른 바다 가운데 섬이 있고 바다 위에 9개의 방갈로가 섬을 둘러싸고 있다"
+                  />
+                </picture>
+              </picture>
             </div>
             <h5 class="sr-only">숙소 정보</h5>
             <!-- 숙소 정보 변경 -->
@@ -176,10 +214,12 @@
                 class="review"
                 aria-label="새로운 숙소라 아직 평점이 없습니다"
               >
-
-                <img class="review__star" src="./assets/icon/icon-star.svg" alt="" />
+                <img
+                  class="review__star"
+                  src="./assets/icon/icon-star.svg"
+                  alt=""
+                />
                 <span aria-hidden="true">NEW</span>
-
               </li>
             </ul>
           </a>
@@ -191,15 +231,34 @@
             <div class="accommodation__item__image">
               <!-- src, alt 변경 -->
               <picture>
-                <source srcset="https://a0.muscache.com/im/pictures/78fb8268-b999-4389-b072-e2a66910e41b.jpg?im_w=320 1x"
-                  media="(max-width: 743px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/78fb8268-b999-4389-b072-e2a66910e41b.jpg?im_w=720 1x"
-                  media="(min-width: 743.1px) and (max-width: 1127px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/78fb8268-b999-4389-b072-e2a66910e41b.jpg?im_w=1200 1x"
-                  media="(min-width: 1127.1px) and (max-width: 1439px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/78fb8268-b999-4389-b072-e2a66910e41b.jpg?im_w=1680 1x"
-                  media="(min-width: 1439.1px)" />
-                <img src="https://a0.muscache.com/im/pictures/78fb8268-b999-4389-b072-e2a66910e41b.jpg?im_w=720" alt="푸른 바다 가운데 섬이 있다" />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/78fb8268-b999-4389-b072-e2a66910e41b.jpg?im_w=320 1x
+                  "
+                  media="(max-width: 743px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/78fb8268-b999-4389-b072-e2a66910e41b.jpg?im_w=720 1x
+                  "
+                  media="(min-width: 743.1px) and (max-width: 1127px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/78fb8268-b999-4389-b072-e2a66910e41b.jpg?im_w=1200 1x
+                  "
+                  media="(min-width: 1127.1px) and (max-width: 1439px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/78fb8268-b999-4389-b072-e2a66910e41b.jpg?im_w=1680 1x
+                  "
+                  media="(min-width: 1439.1px)"
+                />
+                <img
+                  src="https://a0.muscache.com/im/pictures/78fb8268-b999-4389-b072-e2a66910e41b.jpg?im_w=720"
+                  alt="푸른 바다 가운데 섬이 있다"
+                />
               </picture>
             </div>
             <h5 class="sr-only">숙소 정보</h5>
@@ -210,20 +269,18 @@
                 <span class="sr-only">삼천오십 킬로미터</span>
                 <span aria-hidden="true">3,050km 거리</span>
               </li>
-              <li>
-                8월 11일<span aria-label="부터">~</span>18일
-              </li>
+              <li>8월 11일<span aria-label="부터">~</span>18일</li>
               <li class="font-bold">
                 <span class="sr-only">1박에 팔십삼만칠천육백팔십육원</span>
                 <span aria-hidden="true">₩837,686 /박</span>
               </li>
-              <li
-                class="review"
-                aria-label="평점 5점 만점에 4점96점"
-              >
-                <img class="review__star" src="./assets/icon/icon-star.svg" alt="" />
+              <li class="review" aria-label="평점 5점 만점에 4점96점">
+                <img
+                  class="review__star"
+                  src="./assets/icon/icon-star.svg"
+                  alt=""
+                />
                 <span aria-hidden="true">4.96</span>
-
               </li>
             </ul>
           </a>
@@ -236,20 +293,33 @@
               <!-- src, alt 변경 -->
               <picture>
                 <source
-                  srcset="https://a0.muscache.com/im/pictures/miso/Hosting-52159627/original/d727cf6e-4787-4b38-a86f-0cd8d91d02b2.png?im_w=320 1x"
-                  media="(max-width: 743px)" />
+                  srcset="
+                    https://a0.muscache.com/im/pictures/miso/Hosting-52159627/original/d727cf6e-4787-4b38-a86f-0cd8d91d02b2.png?im_w=320 1x
+                  "
+                  media="(max-width: 743px)"
+                />
                 <source
-                  srcset="https://a0.muscache.com/im/pictures/miso/Hosting-52159627/original/d727cf6e-4787-4b38-a86f-0cd8d91d02b2.png?im_w=720 1x"
-                  media="(min-width: 743.1px) and (max-width: 1127px)" />
+                  srcset="
+                    https://a0.muscache.com/im/pictures/miso/Hosting-52159627/original/d727cf6e-4787-4b38-a86f-0cd8d91d02b2.png?im_w=720 1x
+                  "
+                  media="(min-width: 743.1px) and (max-width: 1127px)"
+                />
                 <source
-                  srcset="https://a0.muscache.com/im/pictures/miso/Hosting-52159627/original/d727cf6e-4787-4b38-a86f-0cd8d91d02b2.png?im_w=1200 1x"
-                  media="(min-width: 1127.1px) and (max-width: 1439px)" />
+                  srcset="
+                    https://a0.muscache.com/im/pictures/miso/Hosting-52159627/original/d727cf6e-4787-4b38-a86f-0cd8d91d02b2.png?im_w=1200 1x
+                  "
+                  media="(min-width: 1127.1px) and (max-width: 1439px)"
+                />
                 <source
-                  srcset="https://a0.muscache.com/im/pictures/miso/Hosting-52159627/original/d727cf6e-4787-4b38-a86f-0cd8d91d02b2.png?im_w=1680 1x"
-                  media="(min-width: 1439.1px)" />
+                  srcset="
+                    https://a0.muscache.com/im/pictures/miso/Hosting-52159627/original/d727cf6e-4787-4b38-a86f-0cd8d91d02b2.png?im_w=1680 1x
+                  "
+                  media="(min-width: 1439.1px)"
+                />
                 <img
                   src="https://a0.muscache.com/im/pictures/miso/Hosting-52159627/original/d727cf6e-4787-4b38-a86f-0cd8d91d02b2.png?im_w=720"
-                  alt="바다 위에 나무로 된 빌라들이 섬까지 줄지어 서있다" />
+                  alt="바다 위에 나무로 된 빌라들이 섬까지 줄지어 서있다"
+                />
               </picture>
             </div>
             <h5 class="sr-only">숙소 정보</h5>
@@ -263,7 +333,7 @@
                 class="review"
                 aria-label="새로운 숙소라 아직 평점이 없습니다"
               >
-              <span aria-hidden="true">★</span>              
+                <span aria-hidden="true">★</span>
                 <span aria-hidden="true">NEW</span>
               </li>
             </ul>
@@ -276,15 +346,34 @@
             <div class="accommodation__item__image">
               <!-- src, alt 변경 -->
               <picture>
-                <source srcset="https://a0.muscache.com/im/pictures/e24c13b9-dd2a-4e15-9845-dd588a884e39.jpg?im_w=320 1x"
-                  media="(max-width: 743px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/e24c13b9-dd2a-4e15-9845-dd588a884e39.jpg?im_w=720 1x"
-                  media="(min-width: 743.1px) and (max-width: 1127px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/e24c13b9-dd2a-4e15-9845-dd588a884e39.jpg?im_w=1200 1x"
-                  media="(min-width: 1127.1px) and (max-width: 1439px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/e24c13b9-dd2a-4e15-9845-dd588a884e39.jpg?im_w=1680 1x"
-                  media="(min-width: 1439.1px)" />
-                <img src="https://a0.muscache.com/im/pictures/e24c13b9-dd2a-4e15-9845-dd588a884e39.jpg?im_w=720" alt="에메랄드 빛 바다 가운데 섬이 있고 바다 위에 9개의 숙소가 줄지어 있다" />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/e24c13b9-dd2a-4e15-9845-dd588a884e39.jpg?im_w=320 1x
+                  "
+                  media="(max-width: 743px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/e24c13b9-dd2a-4e15-9845-dd588a884e39.jpg?im_w=720 1x
+                  "
+                  media="(min-width: 743.1px) and (max-width: 1127px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/e24c13b9-dd2a-4e15-9845-dd588a884e39.jpg?im_w=1200 1x
+                  "
+                  media="(min-width: 1127.1px) and (max-width: 1439px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/e24c13b9-dd2a-4e15-9845-dd588a884e39.jpg?im_w=1680 1x
+                  "
+                  media="(min-width: 1439.1px)"
+                />
+                <img
+                  src="https://a0.muscache.com/im/pictures/e24c13b9-dd2a-4e15-9845-dd588a884e39.jpg?im_w=720"
+                  alt="에메랄드 빛 바다 가운데 섬이 있고 바다 위에 9개의 숙소가 줄지어 있다"
+                />
               </picture>
             </div>
             <h5 class="sr-only">숙소 정보</h5>
@@ -298,7 +387,7 @@
                 class="review"
                 aria-label="새로운 숙소라 아직 평점이 없습니다"
               >
-              <span aria-hidden="true">★</span>
+                <span aria-hidden="true">★</span>
                 <span aria-hidden="true">NEW</span>
               </li>
             </ul>
@@ -311,15 +400,34 @@
             <div class="accommodation__item__image">
               <!-- src, alt 변경 -->
               <picture>
-                <source srcset="https://a0.muscache.com/im/pictures/9f5e2990-665a-4e8d-a5ad-89881fff8d33.jpg?im_w=320 1x"
-                  media="(max-width: 743px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/9f5e2990-665a-4e8d-a5ad-89881fff8d33.jpg?im_w=720 1x"
-                  media="(min-width: 743.1px) and (max-width: 1127px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/9f5e2990-665a-4e8d-a5ad-89881fff8d33.jpg?im_w=1200 1x"
-                  media="(min-width: 1127.1px) and (max-width: 1439px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/9f5e2990-665a-4e8d-a5ad-89881fff8d33.jpg?im_w=1680 1x"
-                  media="(min-width: 1439.1px)" />
-                <img src="https://a0.muscache.com/im/pictures/9f5e2990-665a-4e8d-a5ad-89881fff8d33.jpg?im_w=720" alt="섬에 나무가 울창히 우거져 있다" />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/9f5e2990-665a-4e8d-a5ad-89881fff8d33.jpg?im_w=320 1x
+                  "
+                  media="(max-width: 743px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/9f5e2990-665a-4e8d-a5ad-89881fff8d33.jpg?im_w=720 1x
+                  "
+                  media="(min-width: 743.1px) and (max-width: 1127px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/9f5e2990-665a-4e8d-a5ad-89881fff8d33.jpg?im_w=1200 1x
+                  "
+                  media="(min-width: 1127.1px) and (max-width: 1439px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/9f5e2990-665a-4e8d-a5ad-89881fff8d33.jpg?im_w=1680 1x
+                  "
+                  media="(min-width: 1439.1px)"
+                />
+                <img
+                  src="https://a0.muscache.com/im/pictures/9f5e2990-665a-4e8d-a5ad-89881fff8d33.jpg?im_w=720"
+                  alt="섬에 나무가 울창히 우거져 있다"
+                />
               </picture>
             </div>
             <h5 class="sr-only">숙소 정보</h5>
@@ -329,12 +437,7 @@
               <li>3,010km 거리</li>
               <li>8월 10일~15일</li>
               <li class="font-bold">₩97,176 /박</li>
-              <li
-                class="review"
-                aria-label="평점"
-              >
-                4.91
-              </li>
+              <li class="review" aria-label="평점">4.91</li>
             </ul>
           </a>
         </article>
@@ -345,16 +448,35 @@
             <div class="accommodation__item__image">
               <!-- src, alt 변경 -->
               <picture>
-                <source srcset="https://a0.muscache.com/im/pictures/16f4c777-2587-4008-b755-86747c59b5e7.jpg?im_w=320 1x"
-                  media="(max-width: 743px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/16f4c777-2587-4008-b755-86747c59b5e7.jpg?im_w=720 1x"
-                  media="(min-width: 743.1px) and (max-width: 1127px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/16f4c777-2587-4008-b755-86747c59b5e7.jpg?im_w=1200 1x"
-                  media="(min-width: 1127.1px) and (max-width: 1439px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/16f4c777-2587-4008-b755-86747c59b5e7.jpg?im_w=1680 1x"
-                  media="(min-width: 1439.1px)" />
-                <img src="https://a0.muscache.com/im/pictures/16f4c777-2587-4008-b755-86747c59b5e7.jpg?im_w=720" alt="나무로 된 숙소 3개가 섬의 해안가에 나란히 있고 2개의 숙소는 물 위에 떠 있다" />
-              </picture> 
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/16f4c777-2587-4008-b755-86747c59b5e7.jpg?im_w=320 1x
+                  "
+                  media="(max-width: 743px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/16f4c777-2587-4008-b755-86747c59b5e7.jpg?im_w=720 1x
+                  "
+                  media="(min-width: 743.1px) and (max-width: 1127px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/16f4c777-2587-4008-b755-86747c59b5e7.jpg?im_w=1200 1x
+                  "
+                  media="(min-width: 1127.1px) and (max-width: 1439px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/16f4c777-2587-4008-b755-86747c59b5e7.jpg?im_w=1680 1x
+                  "
+                  media="(min-width: 1439.1px)"
+                />
+                <img
+                  src="https://a0.muscache.com/im/pictures/16f4c777-2587-4008-b755-86747c59b5e7.jpg?im_w=720"
+                  alt="나무로 된 숙소 3개가 섬의 해안가에 나란히 있고 2개의 숙소는 물 위에 떠 있다"
+                />
+              </picture>
             </div>
             <h5 class="sr-only">숙소 정보</h5>
             <!-- 숙소 정보 변경 -->
@@ -363,12 +485,7 @@
               <li>4,359km 거리</li>
               <li>8월 3일~8일</li>
               <li class="font-bold">₩132,645 /박</li>
-              <li
-                class="review"
-                aria-label="평점"
-              >
-                4.67
-              </li>
+              <li class="review" aria-label="평점">4.67</li>
             </ul>
           </a>
         </article>
@@ -379,17 +496,35 @@
             <div class="accommodation__item__image">
               <!-- src, alt 변경 -->
               <picture>
-                <source srcset="https://a0.muscache.com/im/pictures/03eabe44-3c2f-4c4f-893e-d3476ad682ab.jpg?im_w=320 1x"
-                  media="(max-width: 743px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/03eabe44-3c2f-4c4f-893e-d3476ad682ab.jpg?im_w=720 1x"
-                  media="(min-width: 743.1px) and (max-width: 1127px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/03eabe44-3c2f-4c4f-893e-d3476ad682ab.jpg?im_w=1200 1x"
-                  media="(min-width: 1127.1px) and (max-width: 1439px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/03eabe44-3c2f-4c4f-893e-d3476ad682ab.jpg?im_w=1680 1x"
-                  media="(min-width: 1439.1px)" />
-                <img src="https://a0.muscache.com/im/pictures/03eabe44-3c2f-4c4f-893e-d3476ad682ab.jpg?im_w=720" alt="푸른 바다 가운데 동그랗게 섬이 위치해 있다" />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/03eabe44-3c2f-4c4f-893e-d3476ad682ab.jpg?im_w=320 1x
+                  "
+                  media="(max-width: 743px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/03eabe44-3c2f-4c4f-893e-d3476ad682ab.jpg?im_w=720 1x
+                  "
+                  media="(min-width: 743.1px) and (max-width: 1127px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/03eabe44-3c2f-4c4f-893e-d3476ad682ab.jpg?im_w=1200 1x
+                  "
+                  media="(min-width: 1127.1px) and (max-width: 1439px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/03eabe44-3c2f-4c4f-893e-d3476ad682ab.jpg?im_w=1680 1x
+                  "
+                  media="(min-width: 1439.1px)"
+                />
+                <img
+                  src="https://a0.muscache.com/im/pictures/03eabe44-3c2f-4c4f-893e-d3476ad682ab.jpg?im_w=720"
+                  alt="푸른 바다 가운데 동그랗게 섬이 위치해 있다"
+                />
               </picture>
-
             </div>
             <h5 class="sr-only">숙소 정보</h5>
             <!-- 숙소 정보 변경 -->
@@ -402,7 +537,7 @@
                 class="review"
                 aria-label="새로운 숙소라 아직 평점이 없습니다"
               >
-              <span aria-hidden="true">★</span>
+                <span aria-hidden="true">★</span>
                 NEW
               </li>
             </ul>
@@ -415,15 +550,34 @@
             <div class="accommodation__item__image">
               <!-- src, alt 변경 -->
               <picture>
-                <source srcset="https://a0.muscache.com/im/pictures/00ab4e4e-502a-4874-bf65-eb463310ee4f.jpg?im_w=320 1x"
-                  media="(max-width: 743px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/00ab4e4e-502a-4874-bf65-eb463310ee4f.jpg?im_w=720 1x"
-                  media="(min-width: 743.1px) and (max-width: 1127px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/00ab4e4e-502a-4874-bf65-eb463310ee4f.jpg?im_w=1200 1x"
-                  media="(min-width: 1127.1px) and (max-width: 1439px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/00ab4e4e-502a-4874-bf65-eb463310ee4f.jpg?im_w=1680 1x"
-                  media="(min-width: 1439.1px)" />
-                <img src="https://a0.muscache.com/im/pictures/00ab4e4e-502a-4874-bf65-eb463310ee4f.jpg?im_w=720" alt="섬 해안가에 수영장이 있는 빨간 지붕의 숙소 3개가 있다" />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/00ab4e4e-502a-4874-bf65-eb463310ee4f.jpg?im_w=320 1x
+                  "
+                  media="(max-width: 743px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/00ab4e4e-502a-4874-bf65-eb463310ee4f.jpg?im_w=720 1x
+                  "
+                  media="(min-width: 743.1px) and (max-width: 1127px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/00ab4e4e-502a-4874-bf65-eb463310ee4f.jpg?im_w=1200 1x
+                  "
+                  media="(min-width: 1127.1px) and (max-width: 1439px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/00ab4e4e-502a-4874-bf65-eb463310ee4f.jpg?im_w=1680 1x
+                  "
+                  media="(min-width: 1439.1px)"
+                />
+                <img
+                  src="https://a0.muscache.com/im/pictures/00ab4e4e-502a-4874-bf65-eb463310ee4f.jpg?im_w=720"
+                  alt="섬 해안가에 수영장이 있는 빨간 지붕의 숙소 3개가 있다"
+                />
               </picture>
             </div>
             <h5 class="sr-only">숙소 정보</h5>
@@ -437,7 +591,7 @@
                 class="review"
                 aria-label="새로운 숙소라 아직 평점이 없습니다"
               >
-              <span aria-hidden="true">★</span>
+                <span aria-hidden="true">★</span>
                 NEW
               </li>
             </ul>
@@ -450,15 +604,34 @@
             <div class="accommodation__item__image">
               <!-- src, alt 변경 -->
               <picture>
-                <source srcset="https://a0.muscache.com/im/pictures/7d4ba1da-cc41-4831-8ae8-5ef97909f7c1.jpg?im_w=320 1x"
-                  media="(max-width: 743px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/7d4ba1da-cc41-4831-8ae8-5ef97909f7c1.jpg?im_w=720 1x"
-                  media="(min-width: 743.1px) and (max-width: 1127px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/7d4ba1da-cc41-4831-8ae8-5ef97909f7c1.jpg?im_w=1200 1x"
-                  media="(min-width: 1127.1px) and (max-width: 1439px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/7d4ba1da-cc41-4831-8ae8-5ef97909f7c1.jpg?im_w=1680 1x"
-                  media="(min-width: 1439.1px)" />
-                <img src="https://a0.muscache.com/im/pictures/7d4ba1da-cc41-4831-8ae8-5ef97909f7c1.jpg?im_w=720" alt="섬의 바깥은 나무가 우거져 있고 안쪽은 숙소들이 위치해 있다" />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/7d4ba1da-cc41-4831-8ae8-5ef97909f7c1.jpg?im_w=320 1x
+                  "
+                  media="(max-width: 743px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/7d4ba1da-cc41-4831-8ae8-5ef97909f7c1.jpg?im_w=720 1x
+                  "
+                  media="(min-width: 743.1px) and (max-width: 1127px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/7d4ba1da-cc41-4831-8ae8-5ef97909f7c1.jpg?im_w=1200 1x
+                  "
+                  media="(min-width: 1127.1px) and (max-width: 1439px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/7d4ba1da-cc41-4831-8ae8-5ef97909f7c1.jpg?im_w=1680 1x
+                  "
+                  media="(min-width: 1439.1px)"
+                />
+                <img
+                  src="https://a0.muscache.com/im/pictures/7d4ba1da-cc41-4831-8ae8-5ef97909f7c1.jpg?im_w=720"
+                  alt="섬의 바깥은 나무가 우거져 있고 안쪽은 숙소들이 위치해 있다"
+                />
               </picture>
             </div>
             <h5 class="sr-only">숙소 정보</h5>
@@ -472,7 +645,7 @@
                 class="review"
                 aria-label="새로운 숙소라 아직 평점이 없습니다"
               >
-              <span aria-hidden="true">★</span>
+                <span aria-hidden="true">★</span>
                 NEW
               </li>
             </ul>
@@ -485,15 +658,34 @@
             <div class="accommodation__item__image">
               <!-- src, alt 변경 -->
               <picture>
-                <source srcset="https://a0.muscache.com/im/pictures/b5b1a508-8c39-41ed-80b1-2352e7e43ef3.jpg?im_w=320 1x"
-                  media="(max-width: 743px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/b5b1a508-8c39-41ed-80b1-2352e7e43ef3.jpg?im_w=720 1x"
-                  media="(min-width: 743.1px) and (max-width: 1127px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/b5b1a508-8c39-41ed-80b1-2352e7e43ef3.jpg?im_w=1200 1x"
-                  media="(min-width: 1127.1px) and (max-width: 1439px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/b5b1a508-8c39-41ed-80b1-2352e7e43ef3.jpg?im_w=1680 1x"
-                  media="(min-width: 1439.1px)" />
-                <img src="https://a0.muscache.com/im/pictures/b5b1a508-8c39-41ed-80b1-2352e7e43ef3.jpg?im_w=720" alt="열대나무가 우거진 섬에 오두막이 있다" />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/b5b1a508-8c39-41ed-80b1-2352e7e43ef3.jpg?im_w=320 1x
+                  "
+                  media="(max-width: 743px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/b5b1a508-8c39-41ed-80b1-2352e7e43ef3.jpg?im_w=720 1x
+                  "
+                  media="(min-width: 743.1px) and (max-width: 1127px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/b5b1a508-8c39-41ed-80b1-2352e7e43ef3.jpg?im_w=1200 1x
+                  "
+                  media="(min-width: 1127.1px) and (max-width: 1439px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/b5b1a508-8c39-41ed-80b1-2352e7e43ef3.jpg?im_w=1680 1x
+                  "
+                  media="(min-width: 1439.1px)"
+                />
+                <img
+                  src="https://a0.muscache.com/im/pictures/b5b1a508-8c39-41ed-80b1-2352e7e43ef3.jpg?im_w=720"
+                  alt="열대나무가 우거진 섬에 오두막이 있다"
+                />
               </picture>
             </div>
             <h5 class="sr-only">숙소 정보</h5>
@@ -503,31 +695,47 @@
               <li>3,180km 거리</li>
               <li>11월 3일~8일</li>
               <li class="font-bold">₩169,613 /박</li>
-              <li
-                class="review"
-                aria-label="평점"
-              >
-                4.96
-              </li>
+              <li class="review" aria-label="평점">4.96</li>
             </ul>
           </a>
         </article>
         <article class="accommodation__item">
           <a class="accommodation__link" href="/">
             <!-- h4 변경 -->
-            <h4 class="sr-only">인도에 위치한 엘리베이터가 있는 대나무 오두막</h4>
+            <h4 class="sr-only">
+              인도에 위치한 엘리베이터가 있는 대나무 오두막
+            </h4>
             <div class="accommodation__item__image">
               <!-- src, alt 변경 -->
               <picture>
-                <source srcset="https://a0.muscache.com/im/pictures/887b3d72-d092-46ed-982f-5dd95fb90dac.jpg?im_w=320 1x"
-                  media="(max-width: 743px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/887b3d72-d092-46ed-982f-5dd95fb90dac.jpg?im_w=720 1x"
-                  media="(min-width: 743.1px) and (max-width: 1127px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/887b3d72-d092-46ed-982f-5dd95fb90dac.jpg?im_w=1200 1x"
-                  media="(min-width: 1127.1px) and (max-width: 1439px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/887b3d72-d092-46ed-982f-5dd95fb90dac.jpg?im_w=1680 1x"
-                  media="(min-width: 1439.1px)" />
-                <img src="https://a0.muscache.com/im/pictures/887b3d72-d092-46ed-982f-5dd95fb90dac.jpg?im_w=720" alt="야자나무 아래에 빨간 지붕 집이 있다" />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/887b3d72-d092-46ed-982f-5dd95fb90dac.jpg?im_w=320 1x
+                  "
+                  media="(max-width: 743px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/887b3d72-d092-46ed-982f-5dd95fb90dac.jpg?im_w=720 1x
+                  "
+                  media="(min-width: 743.1px) and (max-width: 1127px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/887b3d72-d092-46ed-982f-5dd95fb90dac.jpg?im_w=1200 1x
+                  "
+                  media="(min-width: 1127.1px) and (max-width: 1439px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/887b3d72-d092-46ed-982f-5dd95fb90dac.jpg?im_w=1680 1x
+                  "
+                  media="(min-width: 1439.1px)"
+                />
+                <img
+                  src="https://a0.muscache.com/im/pictures/887b3d72-d092-46ed-982f-5dd95fb90dac.jpg?im_w=720"
+                  alt="야자나무 아래에 빨간 지붕 집이 있다"
+                />
               </picture>
             </div>
             <h5 class="sr-only">숙소 정보</h5>
@@ -541,7 +749,7 @@
                 class="review"
                 aria-label="새로운 숙소라 아직 평점이 없습니다"
               >
-              <span aria-hidden="true">★</span>
+                <span aria-hidden="true">★</span>
                 NEW
               </li>
             </ul>
@@ -554,15 +762,34 @@
             <div class="accommodation__item__image">
               <!-- src, alt 변경 -->
               <picture>
-                <source srcset="https://a0.muscache.com/im/pictures/07744838-76c1-496c-8b01-95cd8acca4fb.jpg?im_w=320 1x"
-                  media="(max-width: 743px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/07744838-76c1-496c-8b01-95cd8acca4fb.jpg?im_w=720 1x"
-                  media="(min-width: 743.1px) and (max-width: 1127px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/07744838-76c1-496c-8b01-95cd8acca4fb.jpg?im_w=1200 1x"
-                  media="(min-width: 1127.1px) and (max-width: 1439px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/07744838-76c1-496c-8b01-95cd8acca4fb.jpg?im_w=1680 1x"
-                  media="(min-width: 1439.1px)" />
-                <img src="https://a0.muscache.com/im/pictures/07744838-76c1-496c-8b01-95cd8acca4fb.jpg?im_w=720" alt="붉은 지붕 숙소는 나무로 둘러쌓여있다" />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/07744838-76c1-496c-8b01-95cd8acca4fb.jpg?im_w=320 1x
+                  "
+                  media="(max-width: 743px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/07744838-76c1-496c-8b01-95cd8acca4fb.jpg?im_w=720 1x
+                  "
+                  media="(min-width: 743.1px) and (max-width: 1127px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/07744838-76c1-496c-8b01-95cd8acca4fb.jpg?im_w=1200 1x
+                  "
+                  media="(min-width: 1127.1px) and (max-width: 1439px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/07744838-76c1-496c-8b01-95cd8acca4fb.jpg?im_w=1680 1x
+                  "
+                  media="(min-width: 1439.1px)"
+                />
+                <img
+                  src="https://a0.muscache.com/im/pictures/07744838-76c1-496c-8b01-95cd8acca4fb.jpg?im_w=720"
+                  alt="붉은 지붕 숙소는 나무로 둘러쌓여있다"
+                />
               </picture>
             </div>
             <h5 class="sr-only">숙소 정보</h5>
@@ -575,7 +802,7 @@
                 class="review"
                 aria-label="새로운 숙소라 아직 평점이 없습니다"
               >
-              <span aria-hidden="true">★</span>
+                <span aria-hidden="true">★</span>
                 NEW
               </li>
             </ul>
@@ -588,15 +815,34 @@
             <div class="accommodation__item__image">
               <!-- src, alt 변경 -->
               <picture>
-                <source srcset="https://a0.muscache.com/im/pictures/13010655/ca8854cd_original.jpg?im_w=320 1x"
-                  media="(max-width: 743px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/13010655/ca8854cd_original.jpg?im_w=720 1x"
-                  media="(min-width: 743.1px) and (max-width: 1127px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/13010655/ca8854cd_original.jpg?im_w=1200 1x"
-                  media="(min-width: 1127.1px) and (max-width: 1439px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/13010655/ca8854cd_original.jpg?im_w=1680 1x"
-                  media="(min-width: 1439.1px)" />
-                <img src="https://a0.muscache.com/im/pictures/13010655/ca8854cd_original.jpg?im_w=720" alt="섬에 나무밖에 없고 앞에 물이 있다" />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/13010655/ca8854cd_original.jpg?im_w=320 1x
+                  "
+                  media="(max-width: 743px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/13010655/ca8854cd_original.jpg?im_w=720 1x
+                  "
+                  media="(min-width: 743.1px) and (max-width: 1127px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/13010655/ca8854cd_original.jpg?im_w=1200 1x
+                  "
+                  media="(min-width: 1127.1px) and (max-width: 1439px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/13010655/ca8854cd_original.jpg?im_w=1680 1x
+                  "
+                  media="(min-width: 1439.1px)"
+                />
+                <img
+                  src="https://a0.muscache.com/im/pictures/13010655/ca8854cd_original.jpg?im_w=720"
+                  alt="섬에 나무밖에 없고 앞에 물이 있다"
+                />
               </picture>
             </div>
             <h5 class="sr-only">숙소 정보</h5>
@@ -606,12 +852,7 @@
               <li>2,647km 거리</li>
               <li>8월 3일~8일</li>
               <li class="font-bold">₩137,307 /박</li>
-              <li
-                class="review"
-                aria-label="평점"
-              >
-                4.8
-              </li>
+              <li class="review" aria-label="평점">4.8</li>
             </ul>
           </a>
         </article>
@@ -622,15 +863,34 @@
             <div class="accommodation__item__image">
               <!-- src, alt 변경 -->
               <picture>
-                <source srcset="https://a0.muscache.com/im/pictures/fda8a905-2346-4b5e-8372-191d6c5cba0a.jpg?im_w=320 1x"
-                  media="(max-width: 743px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/fda8a905-2346-4b5e-8372-191d6c5cba0a.jpg?im_w=720 1x"
-                  media="(min-width: 743.1px) and (max-width: 1127px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/fda8a905-2346-4b5e-8372-191d6c5cba0a.jpg?im_w=1200 1x"
-                  media="(min-width: 1127.1px) and (max-width: 1439px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/fda8a905-2346-4b5e-8372-191d6c5cba0a.jpg?im_w=1680 1x"
-                  media="(min-width: 1439.1px)" />
-                <img src="https://a0.muscache.com/im/pictures/fda8a905-2346-4b5e-8372-191d6c5cba0a.jpg?im_w=720" alt="짚으로 된 지붕을 가진 숙소 앞에 흰 쇼파가 두개 있다." />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/fda8a905-2346-4b5e-8372-191d6c5cba0a.jpg?im_w=320 1x
+                  "
+                  media="(max-width: 743px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/fda8a905-2346-4b5e-8372-191d6c5cba0a.jpg?im_w=720 1x
+                  "
+                  media="(min-width: 743.1px) and (max-width: 1127px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/fda8a905-2346-4b5e-8372-191d6c5cba0a.jpg?im_w=1200 1x
+                  "
+                  media="(min-width: 1127.1px) and (max-width: 1439px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/fda8a905-2346-4b5e-8372-191d6c5cba0a.jpg?im_w=1680 1x
+                  "
+                  media="(min-width: 1439.1px)"
+                />
+                <img
+                  src="https://a0.muscache.com/im/pictures/fda8a905-2346-4b5e-8372-191d6c5cba0a.jpg?im_w=720"
+                  alt="짚으로 된 지붕을 가진 숙소 앞에 흰 쇼파가 두개 있다."
+                />
               </picture>
             </div>
             <h5 class="sr-only">숙소 정보</h5>
@@ -641,12 +901,12 @@
               <li>8월 4일~9일</li>
               <li class="font-bold">₩739,908 /박</li>
               <li
-              class="review"
-              aria-label="새로운 숙소라 아직 평점이 없습니다"
+                class="review"
+                aria-label="새로운 숙소라 아직 평점이 없습니다"
               >
-              <span aria-hidden="true">★</span>
-               NEW
-            </li>
+                <span aria-hidden="true">★</span>
+                NEW
+              </li>
             </ul>
           </a>
         </article>
@@ -657,16 +917,35 @@
             <div class="accommodation__item__image">
               <!-- src, alt 변경 -->
               <picture>
-                <source srcset="https://a0.muscache.com/im/pictures/f835542d-eee8-44d4-8bcb-5559d145a491.jpg?im_w=320 1x"
-                  media="(max-width: 743px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/f835542d-eee8-44d4-8bcb-5559d145a491.jpg?im_w=720 1x"
-                  media="(min-width: 743.1px) and (max-width: 1127px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/f835542d-eee8-44d4-8bcb-5559d145a491.jpg?im_w=1200 1x"
-                  media="(min-width: 1127.1px) and (max-width: 1439px)" />
-                <source srcset="https://a0.muscache.com/im/pictures/f835542d-eee8-44d4-8bcb-5559d145a491.jpg?im_w=1680 1x"
-                  media="(min-width: 1439.1px)" />
-                <img src="https://a0.muscache.com/im/pictures/f835542d-eee8-44d4-8bcb-5559d145a491.jpg?im_w=720" alt="파란 지붕의 집 안에 남자가 서서 바깥을 보고 있고 밖에 6명이 앉을 수 있는 의자와 테이블이 있다" />
-              </picture> 
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/f835542d-eee8-44d4-8bcb-5559d145a491.jpg?im_w=320 1x
+                  "
+                  media="(max-width: 743px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/f835542d-eee8-44d4-8bcb-5559d145a491.jpg?im_w=720 1x
+                  "
+                  media="(min-width: 743.1px) and (max-width: 1127px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/f835542d-eee8-44d4-8bcb-5559d145a491.jpg?im_w=1200 1x
+                  "
+                  media="(min-width: 1127.1px) and (max-width: 1439px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/f835542d-eee8-44d4-8bcb-5559d145a491.jpg?im_w=1680 1x
+                  "
+                  media="(min-width: 1439.1px)"
+                />
+                <img
+                  src="https://a0.muscache.com/im/pictures/f835542d-eee8-44d4-8bcb-5559d145a491.jpg?im_w=720"
+                  alt="파란 지붕의 집 안에 남자가 서서 바깥을 보고 있고 밖에 6명이 앉을 수 있는 의자와 테이블이 있다"
+                />
+              </picture>
             </div>
             <h5 class="sr-only">숙소 정보</h5>
             <!-- 숙소 정보 변경 -->
@@ -679,7 +958,7 @@
                 class="review"
                 aria-label="새로운 숙소라 아직 평점이 없습니다"
               >
-              <span aria-hidden="true">★</span>
+                <span aria-hidden="true">★</span>
                 NEW
               </li>
             </ul>
@@ -691,23 +970,36 @@
             <h4 class="sr-only">태국에 위치한 럭셔리 풀 빌라</h4>
             <div class="accommodation__item__image">
               <!-- src, alt 변경 -->
-            <picture>
-              <source
-                srcset="https://a0.muscache.com/im/pictures/prohost-api/Hosting-29862895/original/8d6aff10-5a55-4e94-98a6-846c75e8a608.jpeg?im_w=320 1x"
-                media="(max-width: 743px)" />
-              <source
-                srcset="https://a0.muscache.com/im/pictures/prohost-api/Hosting-29862895/original/8d6aff10-5a55-4e94-98a6-846c75e8a608.jpeg?im_w=720 1x"
-                media="(min-width: 743.1px) and (max-width: 1127px)" />
-              <source
-                srcset="https://a0.muscache.com/im/pictures/prohost-api/Hosting-29862895/original/8d6aff10-5a55-4e94-98a6-846c75e8a608.jpeg?im_w=1200 1x"
-                media="(min-width: 1127.1px) and (max-width: 1439px)" />
-              <source
-                srcset="https://a0.muscache.com/im/pictures/prohost-api/Hosting-29862895/original/8d6aff10-5a55-4e94-98a6-846c75e8a608.jpeg?im_w=1680 1x"
-                media="(min-width: 1439.1px)" />
-              <img
-                src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-29862895/original/8d6aff10-5a55-4e94-98a6-846c75e8a608.jpeg?im_w=720"
-                alt="물이 콸콸 나오는 수영장 앞에 푸른 바다가 펼쳐져 있다" />
-            </picture>
+              <picture>
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/prohost-api/Hosting-29862895/original/8d6aff10-5a55-4e94-98a6-846c75e8a608.jpeg?im_w=320 1x
+                  "
+                  media="(max-width: 743px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/prohost-api/Hosting-29862895/original/8d6aff10-5a55-4e94-98a6-846c75e8a608.jpeg?im_w=720 1x
+                  "
+                  media="(min-width: 743.1px) and (max-width: 1127px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/prohost-api/Hosting-29862895/original/8d6aff10-5a55-4e94-98a6-846c75e8a608.jpeg?im_w=1200 1x
+                  "
+                  media="(min-width: 1127.1px) and (max-width: 1439px)"
+                />
+                <source
+                  srcset="
+                    https://a0.muscache.com/im/pictures/prohost-api/Hosting-29862895/original/8d6aff10-5a55-4e94-98a6-846c75e8a608.jpeg?im_w=1680 1x
+                  "
+                  media="(min-width: 1439.1px)"
+                />
+                <img
+                  src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-29862895/original/8d6aff10-5a55-4e94-98a6-846c75e8a608.jpeg?im_w=720"
+                  alt="물이 콸콸 나오는 수영장 앞에 푸른 바다가 펼쳐져 있다"
+                />
+              </picture>
             </div>
             <h5 class="sr-only">숙소 정보</h5>
             <!-- 숙소 정보 변경 -->
@@ -716,14 +1008,8 @@
               <li>4,127km 거리</li>
               <li>8월 23일~28일</li>
               <li class="font-bold">₩424,294 /박</li>
-              <li
-                class="review"
-                aria-label="평점"
-              >
-                5.0
-              </li>
+              <li class="review" aria-label="평점">5.0</li>
             </ul>
-
           </a>
         </article>
       </section>
