@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="description" content="에어비앤비 홈페이지" />
     <link href="./index.css" rel="stylesheet" />
     <title>에어비앤비 - 여행은 살아보는 거야</title>
   </head>
@@ -12,7 +16,7 @@
     <a class="skip-nav" href="/"><span>컨텐츠로 바로가기</span></a>
     <header class="header">
       <h1 class="sr-only">에어비앤비 홈</h1>
-      <a class="logo__link" href="/">
+      <a class="logo__link" href="/" aria-label="에어비앤비 홈페이지">
         <img class="logo__image" src="./assets/logo/logo-airbnb.svg" alt="" />
       </a>
       <div
@@ -143,21 +147,11 @@
           </button>
         </li>
       </ul>
-      <button
-        class="navigation__left arrow-button"
-        type="button"
-        aria-label="이전 숙소 유형 더보기"
-      ></button>
-      <button
-        class="navigation__right arrow-button"
-        type="button"
-        aria-label="다음 숙소 유형 더보기"
-      ></button>
       <button class="navigation__filter" type="button">필터</button>
     </nav>
     <main>
-      <h3 class="sr-only">섬 유형의 숙소들</h3>
       <section class="accommodation__container">
+        <h3 class="sr-only">섬 유형의 숙소들</h3>
         <article class="accommodation__item">
           <a class="accommodation__link" href="/">
             <!-- h4 변경 -->
@@ -165,11 +159,6 @@
             <div class="accommodation__item__image">
               <!-- src, alt 변경 -->
               <img src="/" alt="" />
-              <button
-                class="arrow-button"
-                type="button"
-                aria-label="다음 숙소 이미지 더보기"
-              ></button>
             </div>
             <h5 class="sr-only">숙소 정보</h5>
             <!-- 숙소 정보 변경 -->
@@ -182,13 +171,9 @@
                 class="review"
                 aria-label="새로운 숙소라 아직 평점이 없습니다"
               >
-                NEW
+                <span aria-hidden="true">NEW</span>
               </li>
             </ul>
-            <button
-              class="accommodation__item__favorite"
-              aria-label="숙소 찜하기"
-            ></button>
           </a>
         </article>
         <article class="accommodation__item">
@@ -198,11 +183,6 @@
             <div class="accommodation__item__image">
               <!-- src, alt 변경 -->
               <img src="/" alt="" />
-              <button
-                class="arrow-button"
-                type="button"
-                aria-label="다음 숙소 이미지 더보기"
-              ></button>
             </div>
             <h5 class="sr-only">숙소 정보</h5>
             <!-- 숙소 정보 변경 -->
@@ -215,13 +195,9 @@
                 class="review"
                 aria-label="새로운 숙소라 아직 평점이 없습니다"
               >
-                NEW
+                <span aria-hidden="true">NEW</span>
               </li>
             </ul>
-            <button
-              class="accommodation__item__favorite"
-              aria-label="숙소 찜하기"
-            ></button>
           </a>
         </article>
         <article class="accommodation__item">
@@ -231,11 +207,6 @@
             <div class="accommodation__item__image">
               <!-- src, alt 변경 -->
               <img src="/" alt="" />
-              <button
-                class="arrow-button"
-                type="button"
-                aria-label="다음 숙소 이미지 더보기"
-              ></button>
             </div>
             <h5 class="sr-only">숙소 정보</h5>
             <!-- 숙소 정보 변경 -->
@@ -248,13 +219,9 @@
                 class="review"
                 aria-label="새로운 숙소라 아직 평점이 없습니다"
               >
-                NEW
+                <span aria-hidden="true">NEW</span>
               </li>
             </ul>
-            <button
-              class="accommodation__item__favorite"
-              aria-label="숙소 찜하기"
-            ></button>
           </a>
         </article>
         <article class="accommodation__item">
@@ -264,11 +231,6 @@
             <div class="accommodation__item__image">
               <!-- src, alt 변경 -->
               <img src="/" alt="" />
-              <button
-                class="arrow-button"
-                type="button"
-                aria-label="다음 숙소 이미지 더보기"
-              ></button>
             </div>
             <h5 class="sr-only">숙소 정보</h5>
             <!-- 숙소 정보 변경 -->
@@ -281,13 +243,9 @@
                 class="review"
                 aria-label="새로운 숙소라 아직 평점이 없습니다"
               >
-                NEW
+                <span aria-hidden="true">NEW</span>
               </li>
             </ul>
-            <button
-              class="accommodation__item__favorite"
-              aria-label="숙소 찜하기"
-            ></button>
           </a>
         </article>
         <article class="accommodation__item">
@@ -297,11 +255,6 @@
             <div class="accommodation__item__image">
               <!-- src, alt 변경 -->
               <img src="/" alt="" />
-              <button
-                class="arrow-button"
-                type="button"
-                aria-label="다음 숙소 이미지 더보기"
-              ></button>
             </div>
             <h5 class="sr-only">숙소 정보</h5>
             <!-- 숙소 정보 변경 -->
@@ -314,13 +267,9 @@
                 class="review"
                 aria-label="새로운 숙소라 아직 평점이 없습니다"
               >
-                NEW
+                <span aria-hidden="true">NEW</span>
               </li>
             </ul>
-            <button
-              class="accommodation__item__favorite"
-              aria-label="숙소 찜하기"
-            ></button>
           </a>
         </article>
       </section>
@@ -332,7 +281,6 @@
           더 보기
         </button>
       </div>
-      <button class="accommodation__map" type="button">지도 표시하기</button>
     </main>
     <footer class="footer">
       <ul class="footer__main">
