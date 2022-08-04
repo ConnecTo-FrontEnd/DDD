@@ -112,6 +112,14 @@
       @include text-14-bold;
     }
   }
+
+  &:hover,
+  &:focus {
+    @include desktop {
+      box-shadow: 0 rem(3px) rem(7px) rgb(0 0 0 / 8%),
+        0 rem(4px) rem(12px) rgb(0 0 0 / 5%);
+    }
+  }
 }
 
 .search__button:nth-child(3) {
