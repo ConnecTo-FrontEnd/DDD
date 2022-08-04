@@ -55,6 +55,9 @@
       width: rem(250px);
       outline: none;
     }
+    @media (max-width: 1127px) {
+      width: rem(40px);
+    }
     @include mobile {
       display: none;
     }
