@@ -16,7 +16,15 @@
     <header class="header">
       <h1 class="sr-only">에어비앤비 홈</h1>
       <a class="logo__link" href="/">
-        <img class="logo__image" src="./assets/logo/logo-airbnb.svg" alt="" />
+        <picture class="logo__image">
+          <source
+            type="image/svg+xml"
+            media="(max-width: 1127px)"
+            srcset="./assets/logo/logo-airbnb-m.svg"
+          />
+          <source srcset="./assets/logo/logo-airbnb.svg" />
+          <img src="./assets/logo/logo-airbnb.svg" alt="" />
+        </picture>
       </a>
       <div
         class="search__container"
