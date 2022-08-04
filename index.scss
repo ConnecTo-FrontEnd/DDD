@@ -82,7 +82,7 @@ button {
     background-size: rem(19px);
     background-position-y: center;
     background-position-x: rem(20px);
-    background-color: $grayscale-white;
+    background-color: transparent;
   }
 }
 
@@ -95,7 +95,7 @@ button {
     width: 100%;
     height: rem(3px);
     border-radius: rem(3px);
-    background-color: $grayscale-gray1;
+    background-color: $grayscale-gray2;
     @include pos(absolute, $b: 0);
   }
 }
@@ -133,6 +133,7 @@ button {
       img {
         width: 100%;
         aspect-ratio: 1 / 1;
+        object-fit: cover;
         border-radius: rem(10px);
         background-color: $grayscale-gray1;
       }
