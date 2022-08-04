@@ -1,15 +1,11 @@
 @use "./styles" as *;
 
-button {
-  cursor: pointer;
-}
-
 // 네비게이션 영역
 @mixin sprite_img($n) {
-  background-image: url(./assets/icon-location/icon-location-sprite.png);
-  background-size: rem(547px) rem(26px);
+  background-image: url(./assets/icon-location/real-icon-location-sprite.png);
+  background-size: rem(546px) rem(26px);
   background-repeat: no-repeat;
-  background-position: rem((-35 * ($n - 1)) * 1px) 0;
+  background-position: rem((-34.7 * ($n - 1)) * 1px) 0;
 }
 
 .navigation {
@@ -21,12 +17,14 @@ button {
   &__list {
     @include flexbox($direction: row, $wrap: nowrap);
     overflow: hidden;
+    overflow-x: scroll;
+    
+
     @include desktop {
       gap: rem(50px);
     }
     @include mobile {
       gap: rem(20px);
-      overflow-x: scroll;
     }
   }
   &__item {
@@ -37,10 +35,10 @@ button {
     border: none;
     background-color: transparent;
     @include desktop {
-      height: rem(55px);
+      height: rem(63px);
     }
     @include mobile {
-      height: rem(44px);
+      height: rem(53px);
     }
   }
   > button {
@@ -80,7 +78,7 @@ button {
     background-size: rem(19px);
     background-position-y: center;
     background-position-x: rem(20px);
-    background-color: $grayscale-white;
+    background-color: transparent;
   }
 }
 
@@ -93,8 +91,9 @@ button {
     width: 100%;
     height: rem(3px);
     border-radius: rem(3px);
-    background-color: $grayscale-gray1;
-    @include pos(absolute, $b: 0);
+
+    background-color: $grayscale-gray2;
+    @include pos($b: 0);
   }
 }
 
@@ -119,11 +118,17 @@ button {
 
 .accommodation {
   &__container {
-    display: grid;
     position: relative;
     padding: rem(34px);
-    grid-template-columns: repeat(auto-fit, minmax(rem(330px), auto));
     gap: rem(34px);
+    @include desktop {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(rem(330px), auto));
+    }
+
+    @include mobile {
+      @include flexbox($direction: column);
+    }
   }
 
   &__item {
@@ -131,6 +136,7 @@ button {
       img {
         width: 100%;
         aspect-ratio: 1 / 1;
+        object-fit: cover;
         border-radius: rem(10px);
         background-color: $grayscale-gray1;
       }
@@ -144,8 +150,7 @@ button {
       .font-bold {
         color: $grayscale-black;
         abbr {
-          text-decoration: none !important;
-          cursor: help;
+          text-decoration: none;
         }
       }
 
@@ -163,11 +168,11 @@ button {
 
       .review {
         @include pos($t: 0, $r: 0);
-      }
-
-      .review::before {
-        content: "★";
-        display: inline;
+        &__star{
+          vertical-align: top;
+          width: 15px;
+          height: 100%;
+        }
       }
     }
   }
