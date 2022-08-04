@@ -166,11 +166,11 @@ button {
 
       .review {
         @include pos($t: 0, $r: 0);
-      }
-
-      .review::before {
-        content: "★";
-        display: inline;
+        &__star{
+          vertical-align: top;
+          width: 15px;
+          height: 100%;
+        }
       }
     }
   }
