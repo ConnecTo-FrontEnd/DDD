@@ -4,15 +4,25 @@
     "sass": "sass index.scss:index.css",
     "watch": "npm run sass -- --watch",
     "serve": "live-server",
+    "build": "npm run sass && run-p html-minify css-nano move-assets-to-public",
     "check": "echo \"1. htmlhint 검사를 시행합니다...\" && npx htmlhint \"**/*.html\" && echo \"2. prettier 검사를 시행합니다...\" && npx prettier --check . ",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "html-minify": "html-minifier --collapse-whitespace --remove-comments --remove-redundant-attributes --remove-tag-whitespace --minify-css true --minify-js true -o public/index.html index.html",
+    "css-nano": "postcss index.css > public/index.css",
+    "move-assets-to-public": "cp -r assets/ public/assets"
   },
   "devDependencies": {
+    "cssnano": "^5.1.12",
+    "html-minifier": "^4.0.0",
     "htmlhint": "^1.1.4",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "live-server": "^1.2.2",
     "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.14",
+    "postcss-cli": "^10.0.0",
+    "postcss-combine-media-query": "^1.0.1",
+    "postcss-preset-env": "^7.7.2",
     "prettier": "2.7.1",
     "sass": "^1.54.0"
   },

@@ -1,9 +1,5 @@
 @use "./styles" as *;
 
-button {
-  cursor: pointer;
-}
-
 // 네비게이션 영역
 @mixin sprite_img($n) {
   background-image: url(./assets/icon-location/real-icon-location-sprite.png);
@@ -95,8 +91,9 @@ button {
     width: 100%;
     height: rem(3px);
     border-radius: rem(3px);
+
     background-color: $grayscale-gray2;
-    @include pos(absolute, $b: 0);
+    @include pos($b: 0);
   }
 }
 
@@ -121,11 +118,17 @@ button {
 
 .accommodation {
   &__container {
-    display: grid;
     position: relative;
     padding: rem(34px);
-    grid-template-columns: repeat(auto-fit, minmax(rem(330px), auto));
     gap: rem(34px);
+    @include desktop {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(rem(330px), auto));
+    }
+
+    @include mobile {
+      @include flexbox($direction: column);
+    }
   }
 
   &__item {
@@ -147,8 +150,7 @@ button {
       .font-bold {
         color: $grayscale-black;
         abbr {
-          text-decoration: none !important;
-          cursor: help;
+          text-decoration: none;
         }
       }
 
